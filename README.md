@@ -6,21 +6,23 @@
 
 ## Hu Moments
 
-Hu Moments ou Momentos da Imagem é um algoritmo que obtém uma média ponderada das intensidades dos pixels de uma imagem. Eles são frequentemente usados ​​para caracterizar a forma de um objeto em uma imagem. A ideia do descritor de imagem Hu Moments ser utilizado para extração de características mais complexas de uma imagem, como forma, circuferência, área e muito mais.
+Hu Moments ou Momentos da Imagem é um algoritmo que obtém uma média ponderada das intensidades dos pixels de uma imagem. Eles são frequentemente utilizados ​​para caracterizar a forma de um objeto em uma imagem. A ideia do descritor de imagem Hu Moments é ser utilizado para extração de características mais complexas de uma imagem, como forma, circuferência, área e muito mais.
 
 ### Propósito
 
 Projeto destinado a disciplina de Processamento de Imagens que tem como finalidade a implementação de um descritor para então utilizar classificadores e obter sua acurácia para uma determinada quantia de imagens de RaioX que estão divididas em imagens de pulmões normais e imagens de pulmões infectados por Covid-19.
 
-## Repositório
+## Repositórios
 
--   https://github.com/andreluiz19/procimg-final
+-   Código Fonte: https://github.com/andreluiz19/procimg-final
+
+-   Vídeo: https://drive.google.com/file/d/1bqVANbagdSonzGvDFrR10bWz1rNy6xLR/view?usp=sharing
 
 ## Classificadores e Acurácia
 
 | Classificador | Acurácia |
 | :------------ | :------- |
-| RF            | 58.93%   |
+| RF            | 69.64%   |
 | SVM           | 53.57%   |
 | MLP           | 50%      |
 
@@ -46,7 +48,7 @@ Projeto destinado a disciplina de Processamento de Imagens que tem como finalida
 -   Após configurar o dataset das imagens, executa-se então o script `grayHistogramAndHuMoments_FeatureExtraction.py`, esse script irá utilizar os métodos descritores
     **Gray Histogram Feature Extraction** e **Hu Moments** para salvar os `labels`, `features` e `encoderClasses`.
 
--   Então pode-se executar qualquer um dos scripts de classificação, `svm_classifier.py`, `rf_classifier.py`, `mlp_classifier.py` ou `run_all_classifiers.py` para obter a acurácia ou precisão de cada um dos algoritmos.
+-   Então pode-se executar qualquer um dos scripts de classificação, `svm_classifier.py`, `rf_classifier.py`, `mlp_classifier.py` ou `run_all_classifiers.py` para obter a acurácia de cada um dos algoritmos.
 
 -   Como resultado dos classicadores, será gravado dentro do diretório `results` a **Matriz de Confusão** ou **Acurácia** dos algoritmos.
 

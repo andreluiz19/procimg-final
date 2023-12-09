@@ -78,12 +78,17 @@ def extractHuMomentsFeatures(images):
     for image in images:
         if (np.ndim(image) > 2):  # > 2 = colorida
             image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) # Transformando a imagem para escala de cinza
-        moments = cv2.moments(image) # Calcula os momentos da imagem, os momentos são características estáticas
-        hu_moments = cv2.HuMoments(moments)
+            image = getBinaryImage(image) # Transformando a imagem em binária
+        moments = cv2.moments(image) # Calcula os momentos da imagem
+        hu_moments = cv2.HuMoments(moments) # Calcula os momentos Hu da imagem
         featureList.append(hu_moments.flatten())
         bar.next()
     bar.finish()
     return np.array(featureList,dtype=object)
+
+def getBinaryImage(image):
+    _, binaryImage = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY) # Transforma a imagem em binária
+    return binaryImage
 
 def encodeLabels(labels):
     startTime = time.time()
